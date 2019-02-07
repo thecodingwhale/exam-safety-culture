@@ -1,17 +1,27 @@
 {
   "name": "exam-safety-culture",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.8.0",
+    "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.3"
+    "react-scripts": "2.1.3",
+    "react-test-renderer": "^16.7.0",
+    "storybook-addon-styled-component-theme": "^1.1.1",
+    "styled-components": "^4.1.3",
+    "surge": "^0.20.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build-surge": "rm -rf build && npm run build && echo aldrenterante.exam-safety-culture.surge.sh > ./build/CNAME && surge ./build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +31,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@storybook/react": "^4.1.11",
+    "@storybook/addon-actions": "^4.1.11",
+    "@storybook/addon-links": "^4.1.11"
+  }
 }
