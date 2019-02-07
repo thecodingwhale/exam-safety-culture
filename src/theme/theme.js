@@ -1,4 +1,5 @@
-const theme = {
+export const defaultTheme = {
+	name: 'Default Theme',
 	primary: {
 		brandColor: '#0095ff',
 		fontColor: '#ffffff',
@@ -8,5 +9,3 @@ const theme = {
 		fontColor: '#524502',
 	}
 };
-
-export default theme;
